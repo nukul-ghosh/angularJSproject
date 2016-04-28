@@ -1,25 +1,25 @@
 var app = angular.module('myApp', ['ui.router']);
 
-app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
-  
-  $urlRouterProvider.otherwise('/welcome');
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-  $stateProvider
-    .state('welcome', {
-      url:'/welcome',
-      templateUrl:'templates/welcome.html',
-      controller:'welcomeCtrl'
-    })
-    
+    $urlRouterProvider.otherwise('/welcome');
+
+    $stateProvider
+      .state('welcome', {
+          url: '/welcome',
+          templateUrl: 'templates/welcome.html',
+          controller: 'welcomeCtrl'
+      })
+
     .state('form', {
-      url:'/form',
-      templateUrl:'templates/form.html',
-      controller:'formCtrl'
+        url: '/form',
+        templateUrl: 'templates/form.html',
+        controller: 'formCtrl'
     })
 
     .state('curd', {
-      url:'/curd',
-      templateUrl:'templates/curd.html',
-      controller:'curdCtrl'
+        url: '/curd',
+        templateUrl: 'templates/curd.html',
+        controller: 'curdCtrl'
     });
 }]);

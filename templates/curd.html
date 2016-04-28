@@ -1,3 +1,35 @@
 <div class="col-xs-12">
-	<p>This is the curd page</p>
+    <input type="text" class="form-control" placeholder="Search Developers Name" ng-model="search" ng-minlength="2" />
+    <br>
+</div>
+<!-- Name -->
+<div class="col-xs-12">
+    <ul>
+        <li ng-repeat="developer in developerList | filter : search">
+            <p>{{developer.name}}
+                <button type="button" class="btn btn-primary" ng-click="edit($index, developer)">Edit</button>
+                <button type="button" class="btn btn-primary" ng-click="delete(developer)">Delete</button>
+            </p>
+        </li>
+    </ul>
+</div>
+<!-- Edit -->
+<div class="col-xs-12" ng-if="updateDeveloperName">
+    <input type="text" class="form-control" placeholder="Update Developers Name" ng-model="argss.updateDev">
+    <br>
+    <button type="button" class="btn btn-primary" ng-click="updateDeveloper()">Update</button>
+    <button type="button" class="btn btn-primary" ng-click="cancelUpdate()">Cancel</button>
+    <br>
+    <br>
+</div>
+<!-- Add -->
+<div class="col-xs-12">
+    <button type="button" class="btn btn-primary" ng-if="!addNewDeveloper" ng-click="addDeveloperForm()">Add New Developer</button>
+    <div class="col-xs-12" ng-if="addNewDeveloper">
+        <input type="text" class="form-control" placeholder="Enter Developers Name" ng-model="args.newDev">
+        <br>
+        <button type="button" class="btn btn-primary" ng-click="addDeveloper()">Add</button>
+        <button type="button" class="btn btn-primary" ng-click="cancelAdd()">Cancel</button>
+    </div>
+</div>
 </div>

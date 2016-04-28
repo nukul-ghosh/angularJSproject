@@ -1,29 +1,21 @@
 <div class="col-xs-12">
-	<h2>AngularJS Form Validation</h2>
-    			
-    			<form name="userform" ng-submit="newuser(userform.$isValid)" novalidate>
-
-		        <div class="form-group" ng-class="{'has-error': userform.name.$invalid && submitted}">
-		            <label>Username</label>
-		            <input type="text" name="name" ng-model="name" class="form-control" required>
-		            <p ng-if="userform.name.$invalid  && submitted" class="help-block bg-danger">Please enter your name.</p>
-		        </div>
-
-		        
-		        <div class="form-group" ng-class="{'has-error': userform.pass.$invalid && submitted}">
-		            <label>Password</label>
-		            <input type="password" name="pass" ng-model="pass"  class="form-control" ng-minlength="6" required>
-		            <p ng-if="userform.pass.$invalid && submitted" class="help-block bg-danger">Please enter password.</p>
-		        </div>
-		        
-		      
-		        <div class="form-group" ng-class="{'has-error': userform.email.$invalid && submitted}">
-		            <label>Email</label>
-		            <input type="email" name="email" class="form-control" ng-model="email" required>
-		            <p ng-if="userform.email.$invalid && submitted" class="help-block bg-danger">Please enter your email.</p>
-		        </div>
-		        
-		        <button type="submit" class="btn btn-primary">Submit</button>
-		        
-		    </form>
+    <h2>AngularJS Form Validation</h2>
+    <form name="userform" ng-submit="newuser(userform.$isValid)" novalidate>
+        <div class="form-group" ng-class="{'has-error': userform.name.$invalid && submitted}">
+            <label>Username</label>
+            <input type="text" name="name" ng-model="name" class="form-control" required>
+            <p ng-if="userform.name.$invalid  && submitted" class="help-block bg-danger">Please enter your name.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': userform.pass.$invalid && submitted}">
+            <label>Password</label>
+            <input type="password" name="pass" ng-model="pass" class="form-control" ng-minlength="6" required>
+            <p ng-if="userform.pass.$invalid && submitted" class="help-block bg-danger">Please enter password.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': userform.email.$invalid && submitted}">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" ng-model="email" required>
+            <p ng-if="userform.email.$invalid && submitted" class="help-block bg-danger">Please enter your email.</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
