@@ -1,0 +1,16 @@
+.sidebar {
+    background-color: #F5F5F5;
+    position: absolute;
+    left: -71%;
+    top: 56px;
+    z-index: 5;
+    width: 70%;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    transition: left 400ms ease-in-out;
+}
+
+.sidebar.opened{
+	left: 0%;
+}

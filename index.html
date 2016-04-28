@@ -4,21 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<title>Angular Project</title>
-	<link href="style/bootstrap.min.css" type="text/css"></link>
-	<link href="style/style.css" type="text/css"></link>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"></link>
+	<link href="css/style.css" type="text/css" rel="stylesheet"></link>
 	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
-	<script type="text/javascript" src="js/vendor/angular-ui-router.min.js"></script>
-	
+	<script type="text/javascript" src="js/vendor/angular-ui-router.min.js"></script>	
 </head>
 <body ng-app="myApp">
 	<section class="container" ng-controller="mainPage">
 		<div class="row">
-			{{msg}}
+			<!-- HEADER -->
+			<div ng-include="'templates/header.html'"></div>
 
-		</div>
+			<!-- SIDERBAR -->
+			<div ng-include="'templates/sidebar.html'"></div>
+
+			<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
+			<ui-view></ui-view>
+
+			<!-- FOOTER -->
+			<div ng-include="'templates/footer.html'"></div>
+		</div>	
 	</section>
 
 	<script type="text/javascript" src="js/app/app.js"></script>
 	<script type="text/javascript" src="js/app/mainPagecontroller.js"></script>
+	<script type="text/javascript" src="js/app/welcomeController.js"></script>
+	<script type="text/javascript" src="js/app/formController.js"></script>
+	<script type="text/javascript" src="js/app/curdController.js"></script>
 </body>
 </html>

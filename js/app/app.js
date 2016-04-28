@@ -1,19 +1,25 @@
 var app = angular.module('myApp', ['ui.router']);
 
+app.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
+  
+  $urlRouterProvider.otherwise('/welcome');
 
-app.config(function($stateProvider, $urlRouterProvider) {
-  //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
-  //
-  // Now set up the states
   $stateProvider
-    .state('state1', {
-      url: "/page1",
-      templateUrl: "templates/page1.html"
+    .state('welcome', {
+      url:'/welcome',
+      templateUrl:'templates/welcome.html',
+      controller:'welcomeCtrl'
     })
-    .state('state2', {
-      url: "/page2",
-      templateUrl: "templates/page2.html"
+    
+    .state('form', {
+      url:'/form',
+      templateUrl:'templates/form.html',
+      controller:'formCtrl'
+    })
+
+    .state('curd', {
+      url:'/curd',
+      templateUrl:'templates/curd.html',
+      controller:'curdCtrl'
     });
-});
+}]);

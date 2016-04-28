@@ -1,0 +1,78 @@
+[
+	{
+		"brand":"Nokia",
+		"model":"1100",
+		"Price":"3000"
+	},
+	{
+		"brand":"Nokia",
+		"model":"Lumia",
+		"Price":"7000"
+	},
+	{
+		"brand":"Nokia",
+		"model":"Lumia XL",
+		"Price":"9000"
+	},
+	{
+		"brand":"Motorola",
+		"model":"Moto G",
+		"Price":"12000"
+	},
+	{
+		"brand":"Motorola",
+		"model":"Moto X",
+		"Price":"18000"
+	},
+	{
+		"brand":"Motorola",
+		"model":"Moto 360",
+		"Price":"22000"
+	},
+	{
+		"brand":"Motorola",
+		"model":"Moto Play",
+		"Price":"30000"
+	},
+	{
+		"brand":"Samsung",
+		"model":"Galaxy 5",
+		"Price":"32000"
+	},
+	{
+		"brand":"Samsung",
+		"model":"Galaxy 6",
+		"Price":"38000"
+	},
+	{
+		"brand":"Samsung",
+		"model":"Galaxy 7",
+		"Price":"45000"
+	},
+	{
+		"brand":"Samsung",
+		"model":"Note 5",
+		"Price":"40000"
+	},
+	{
+		"brand":"Apple",
+		"model":"Iphone 5s",
+		"Price":"24000"
+	},
+	{
+		"brand":"Apple",
+		"model":"Iphone SE",
+		"Price":"28000"
+	},
+	{
+		"brand":"Apple",
+		"model":"Iphone 6s",
+		"Price":"45000"
+	},
+	{
+		"brand":"Apple",
+		"model":"Iphone 6s Plus",
+		"Price":"55000"
+	}
+
+]
