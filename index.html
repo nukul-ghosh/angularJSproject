@@ -5,9 +5,12 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Angular Project</title>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"></link>
+    <link href="css/animations.css" type="text/css" rel="stylesheet"></link>
     <link href="css/style.css" type="text/css" rel="stylesheet"></link>
     <script type="text/javascript" src="js/vendor/angular.min.js"></script>
     <script type="text/javascript" src="js/vendor/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular-animate.min.js"></script>
+    
 </head>
 
 <body ng-app="myApp">
@@ -18,9 +21,9 @@
             <!-- SIDERBAR -->
             <div ng-include="'templates/sidebar.html'"></div>
             <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT -->
-            <ui-view></ui-view>
+            <div ui-view class="pagehldr"></div>
             <!-- FOOTER -->
-            <div ng-include="'templates/footer.html'"></div>
+            <div class="footerHldr" ng-include="'templates/footer.html'"></div>
         </div>
     </section>
     <script type="text/javascript" src="js/app/app.js"></script>

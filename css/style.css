@@ -1,16 +1,101 @@
+
+body{height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footerHldr{
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+    }
 .sidebar {
     background-color: #F5F5F5;
     position: absolute;
-    left: -71%;
+    left: 0;
     top: 56px;
     z-index: 5;
     width: 70%;
     border-right: 1px solid #ccc;
     border-top: 1px solid #ccc;
     bottom: 0;
-    transition: left 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    transform:translate3d(-100%, 0, 0);
 }
 
 .sidebar.opened{
-	left: 0%;
+    transform:translate3d(0%, 0, 0);	
 }
+
+.pagehldr{
+        position:absolute;
+        bottom:40px;
+        left: 0;
+        right: 0;
+        top: 58px;
+        overflow-y:auto; 
+    }
+
+/* ANIMATIONS
+============================================================================= */
+
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+/*@keyframes rotateFall {
+    0%      { transform: rotateZ(0deg); opacity: 1; }
+    20%     { transform: rotateZ(10deg); animation-timing-function: ease-out;opacity: 0.8; }
+    40%     { transform: rotateZ(17deg); opacity: 0.6;}
+    60%     { transform: rotateZ(16deg); opacity: 0.4; }
+    100%    { transform: translate3d(0, 100%, 0) rotateZ(17deg); opacity: 0; }
+}*/
+
+/* slide in from the bottom */
+/*@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); opacity: 0; }
+}*/
+
+/* rotate out newspaper */
+/*@keyframes rotateOutNewspaper {
+    to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+}*/
+
+/* entering animations --------------------------------------- */
+/* scale up */
+/*@keyframes scaleUp {
+    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+}
+@keyframes scaleUpLeave {
+    to    { opacity: 0; -webkit-transform: scale(1.2); }
+}*/
+
+/* slide in from the right */
+/*@keyframes slideInRight {
+    from    { transform:translateX(100%);opacity: 0; }
+    to      { transform: translateX(0);opacity: 1; }
+}*/
+
+/* slide in from the bottom */
+/*@keyframes slideInUp {
+    from    { transform:translateY(100%); }
+    to      { transform: translateY(0); }
+}*/
+
+
+.ng-leave{
+    -webkit-animation: moveToRight .6s ease both;
+    animation: moveToRight .6s ease both;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.8);
+    opacity: 0.4;
+}
+
+.ng-enter{
+    -webkit-animation: moveFromLeft .6s ease both;
+    animation: moveFromLeft .6s ease both;
+    z-index: 888; }

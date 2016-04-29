@@ -1,6 +1,6 @@
 app.controller('curdCtrl', ['$scope', '$http', function($scope, $http) {
 
-    $http.get('http://10.1.3.150:8000/js/json/developerList.json')
+    $http.get('js/json/developerList.json')
         .success(function(response) {
             $scope.developerList = response.records;
         });
