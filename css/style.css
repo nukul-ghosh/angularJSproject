@@ -87,7 +87,7 @@ body{height: 100%;
 }*/
 
 
-.ng-leave{
+.pagehldr.ng-leave{
     -webkit-animation: moveToRight .6s ease both;
     animation: moveToRight .6s ease both;
     z-index: 999;
@@ -95,7 +95,7 @@ body{height: 100%;
     opacity: 0.4;
 }
 
-.ng-enter{
+.pagehldr.ng-enter{
     -webkit-animation: moveFromLeft .6s ease both;
     animation: moveFromLeft .6s ease both;
     z-index: 888; }
